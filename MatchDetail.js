@@ -15,7 +15,7 @@ export default {
         return new Response("No Match ID was Provided", {status: 200});
       }
 
-      const response = await fetch(`https://www.fotmob.com/api/matchDetails?matchId=${date}`);
+      const response = await fetch(`https://www.fotmob.com/api/matchDetails?matchId=${matchID}`);
       const result = await response.text();
 
       return new Response(result, { status: 200, headers });
